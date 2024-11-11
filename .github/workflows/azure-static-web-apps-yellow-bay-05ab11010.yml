@@ -42,7 +42,7 @@ jobs:
           api_location: "" # No API in this case
           output_location: "" # No built output since it's a static site
           github_id_token: ${{ steps.idtoken.outputs.result }}
-          app_build_command: ""  # This tells Azure to skip any build process.
+          app_build_command: ""  # Skip any build process.
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
