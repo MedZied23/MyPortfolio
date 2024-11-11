@@ -40,7 +40,7 @@ jobs:
           action: "upload"
           app_location: "/"  # Point to the root directory
           api_location: ""   # No API, leave it empty
-          output_location: "" # No built output, leave it empty
+          output_location: "/"  # Static files are directly in the root
           github_id_token: ${{ steps.idtoken.outputs.result }}
           
   close_pull_request_job:
